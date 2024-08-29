@@ -11,3 +11,13 @@ title : Thots
 
 
 This is where I share all my thoughts either in 2 lines or a blog format
+
+
+{% for post in site.categories.thots %}
+  <article>
+    <h4>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span style="font-size: 0.6em; color: #888;">  {{ post.date | date: "%B %d, %Y" }}</span>
+    </h4>
+  </article>
+{% endfor %}
